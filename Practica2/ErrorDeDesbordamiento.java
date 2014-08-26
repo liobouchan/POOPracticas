@@ -3,12 +3,9 @@ import java.awt.*;
 
 public class ErrorDeDesbordamiento extends Applet{
 
-  long positivo = 500000000000000L + 5000000000000L;
-  long negativo = -2L - 2000000000000L;
-
-public void paint (Graphics g){
-  g.drawString("positivo contiene: " + positivo, 5, 25);
-  g.drawString("negativo contiene: " + negativo, 5, 50);
+  //Función utilizada parar mostrar los datos al usuario.
+  public void paint (Graphics g){
+    g.drawString(new funcionesDesbordamiento().obtenerPositivo(), 5, 25);
+    g.drawString(new funcionesDesbordamiento().obtenerNegativo(), 5, 50);
+  }
 }
-}
-
