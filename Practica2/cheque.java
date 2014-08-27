@@ -7,7 +7,7 @@ public class cheque{
   static int auxiliar = 0;
   static int decena = 0, mil = 0;
 
-  public static String leer(){ 
+  public static String leer(){
     String s = "";
     DataInputStream sd = new DataInputStream(System.in);
     System.out.flush();
@@ -44,7 +44,7 @@ public class cheque{
           if(numero==9)
             palabra+="nueve";
         }
-      break;
+        break;
       }
       case 2:{
         if(numero==1){
@@ -85,8 +85,8 @@ public class cheque{
             palabra+="ochenta y ";
           if(numero==9)
             palabra+="noventa y ";
-          break;
-          }
+        }
+        break;
       }
     case 3: {
     if(numero==1)
@@ -221,7 +221,7 @@ public class cheque{
     int numero;
     int identificador=longitud;
 
-    while(auxiliar!=0) {
+    while(auxiliar<longitud) {
     char caracter=num.charAt(auxiliar);
     numero=Integer.parseInt(caracter+"");
     identifica(numero,identificador);
@@ -246,3 +246,4 @@ public class cheque{
   System.out.println();
   System.out.println("Firma:_________________");
    }
+ }
