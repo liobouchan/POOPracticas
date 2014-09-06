@@ -4,16 +4,14 @@
  * and open the template in the editor.
  */
 
-package tarjetadecredito;
+package cuenta;
 
 /**
  *
- * @author liodebian
+ * @author lio
  */
-public class Cliente {
-    private int id;
-    private int saldo;
-    private int[] articulos = new int[10000];
-    private int total;
-    
+public class Cuenta {
+    private String ID;
+    private double saldo;
+    private double limite;
 }
