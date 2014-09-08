@@ -6,7 +6,9 @@
 
 package cuenta.vistas;
 
+import cuenta.Articulo;
 import cuenta.Cliente;
+import cuenta.Cuenta;
 
 /**
  *
@@ -25,6 +27,20 @@ public class ViewTienda extends javax.swing.JFrame {
         String nombre = cliente.nombre;
         showNombre.setText(nombre);
         return nombre;
+    }
+    
+    public double showLimite( Cuenta cuenta ){
+       double limite = cuenta.limite;
+       showLimite.setText(String.valueOf(limite));
+       return limite; 
+    }
+    
+    public String showArticulos( Articulo articulo ){
+       String nombre = articulo.nombre;
+       double precio = articulo.precio;
+       showArticulo.setText(nombre);
+       showPrecio.setText(String.valueOf(precio));
+       return nombre;
     }
     
     public void obtainData(Cliente cliente){
@@ -52,6 +68,8 @@ public class ViewTienda extends javax.swing.JFrame {
         showLimite = new javax.swing.JLabel();
         buttonComprar = new javax.swing.JButton();
         showNombre = new javax.swing.JLabel();
+        textInfoPesos = new javax.swing.JLabel();
+        textInfoPesos1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -77,6 +95,10 @@ public class ViewTienda extends javax.swing.JFrame {
 
         showNombre.setText("jLabel1");
 
+        textInfoPesos.setText("$");
+
+        textInfoPesos1.setText("$");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -89,25 +111,29 @@ public class ViewTienda extends javax.swing.JFrame {
                             .addComponent(textInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(textInfo2)
                             .addComponent(showArticulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                                .addComponent(textInfo3)
-                                .addGap(36, 36, 36))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
+                                .addComponent(textInfoPesos1, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(showPrecio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(showNombre, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addContainerGap())))
+                                    .addComponent(showNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 108, Short.MAX_VALUE)
+                                    .addComponent(showPrecio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(textInfo3)
+                                .addGap(0, 0, Short.MAX_VALUE)))
+                        .addContainerGap())
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(textInfoSaldo)
                             .addComponent(showSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(62, 62, 62)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(textInfoLimite)
-                            .addComponent(showLimite, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(textInfoPesos, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(showLimite, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(textInfoLimite))
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -128,7 +154,8 @@ public class ViewTienda extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(showArticulo)
-                    .addComponent(showPrecio))
+                    .addComponent(showPrecio)
+                    .addComponent(textInfoPesos1))
                 .addGap(45, 45, 45)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(textInfoSaldo)
@@ -136,8 +163,9 @@ public class ViewTienda extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(showSaldo)
-                    .addComponent(showLimite))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                    .addComponent(showLimite)
+                    .addComponent(textInfoPesos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 39, Short.MAX_VALUE)
                 .addComponent(buttonComprar)
                 .addContainerGap())
         );
@@ -191,6 +219,8 @@ public class ViewTienda extends javax.swing.JFrame {
     private javax.swing.JLabel textInfo2;
     private javax.swing.JLabel textInfo3;
     private javax.swing.JLabel textInfoLimite;
+    private javax.swing.JLabel textInfoPesos;
+    private javax.swing.JLabel textInfoPesos1;
     private javax.swing.JLabel textInfoSaldo;
     // End of variables declaration//GEN-END:variables
 }

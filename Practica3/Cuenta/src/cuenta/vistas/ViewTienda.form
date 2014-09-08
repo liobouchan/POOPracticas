@@ -32,21 +32,22 @@
                           <Component id="textInfo2" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Component id="showArticulo" alignment="0" max="32767" attributes="0"/>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
-                              <EmptySpace pref="72" max="32767" attributes="0"/>
-                              <Component id="textInfo3" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="showPrecio" max="32767" attributes="0"/>
-                                  <Component id="showNombre" max="32767" attributes="0"/>
-                              </Group>
+                              <Component id="textInfoPesos1" min="-2" pref="20" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="showNombre" pref="108" max="32767" attributes="0"/>
+                                  <Component id="showPrecio" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="textInfo3" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -55,8 +56,12 @@
                       </Group>
                       <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="textInfoPesos" min="-2" pref="20" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="showLimite" min="-2" pref="117" max="-2" attributes="0"/>
+                          </Group>
                           <Component id="textInfoLimite" min="-2" max="-2" attributes="0"/>
-                          <Component id="showLimite" min="-2" pref="108" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
@@ -86,6 +91,7 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="showArticulo" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="showPrecio" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="textInfoPesos1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
@@ -96,8 +102,9 @@
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="showSaldo" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="showLimite" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="textInfoPesos" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace pref="29" max="32767" attributes="0"/>
+              <EmptySpace pref="39" max="32767" attributes="0"/>
               <Component id="buttonComprar" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -158,6 +165,16 @@
     <Component class="javax.swing.JLabel" name="showNombre">
       <Properties>
         <Property name="text" type="java.lang.String" value="jLabel1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="textInfoPesos">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="$"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="textInfoPesos1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="$"/>
       </Properties>
     </Component>
   </SubComponents>

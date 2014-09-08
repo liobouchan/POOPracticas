@@ -12,6 +12,12 @@ package cuenta;
  */
 public class Articulo {
     private int sku;
-    private String nombre;
-    private double precio;
+    public String nombre;
+    public double precio;
+    
+    public Articulo( int sku, String nombre, double precio){
+        this.sku = sku;
+        this.nombre = nombre;
+        this.precio = precio;
+    }
 }

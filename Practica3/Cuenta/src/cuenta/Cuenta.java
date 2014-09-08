@@ -13,5 +13,11 @@ package cuenta;
 public class Cuenta {
     private String ID;
     private double saldo;
-    private double limite;
+    public double limite;
+    
+    public Cuenta(String ID , double saldo , double limite){
+        this.ID = ID;
+        this.saldo = saldo;
+        this.limite = limite;
+    }
 }

@@ -6,6 +6,7 @@
 
 package cuenta.vistas;
 
+import cuenta.Articulo;
 import cuenta.Cliente;
 import cuenta.Cuenta;
 /**
@@ -114,12 +115,17 @@ public class ViewCliente extends javax.swing.JFrame {
         
         nombre = textNombre.getText();
         ID = textCuenta.getText();
-        limite = Integer.parseInt(textLimite.getText());
+        limite = Double.parseDouble(textLimite.getText());
         
         Cliente cliente = new Cliente(nombre, 0, 0, 0, ID);
+        Cuenta cuenta = new Cuenta(ID, 0, limite);
+        Articulo articulo = new Articulo(001, "Iphone 9", 199.99);
         ViewTienda vistaTienda = new ViewTienda();
+
         vistaTienda.setVisible(true);
         vistaTienda.showNombre(cliente);
+        vistaTienda.showLimite(cuenta);
+        vistaTienda.showArticulos(articulo);
     }//GEN-LAST:event_botonEntrarActionPerformed
 
     /**
