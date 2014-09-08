@@ -15,4 +15,11 @@ public class Cliente {
     private int numeroDeArticulos;
     private double cuentaTotal;
     private double cuentaParcial;
+    
+    public Cliente( String nombre , int numeroDeArticulos , double cuentaTotal , double cuentaParcial ){
+        this.nombre = nombre;
+        this.numeroDeArticulos = numeroDeArticulos;
+        this.cuentaTotal = cuentaTotal;
+        this.cuentaParcial = cuentaParcial;
+    }
 }

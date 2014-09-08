@@ -10,8 +10,8 @@ package cuenta;
  *
  * @author lio
  */
-public class Articulo {
-    private int sku;
-    private String nombre;
-    private double precio;
+public class Main {
+    public static void main(String args[]){
+        
+    }
 }
