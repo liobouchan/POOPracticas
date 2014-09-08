@@ -126,6 +126,7 @@ public class ViewCliente extends javax.swing.JFrame {
         vistaTienda.showNombre(cliente);
         vistaTienda.showLimiteYSaldo(cuenta);
         vistaTienda.showArticulos(articulo);
+        this.setVisible(false);
     }//GEN-LAST:event_botonEntrarActionPerformed
 
     /**
