@@ -6,12 +6,15 @@
 
 package cuenta;
 
+import cuenta.vistas.ViewCliente;
+
+
 /**
  *
  * @author lio
  */
 public class Main {
     public static void main(String args[]){
-        
+        new ViewCliente().setVisible(true);
     }
 }
