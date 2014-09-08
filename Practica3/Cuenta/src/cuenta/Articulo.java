@@ -20,4 +20,10 @@ public class Articulo {
         this.nombre = nombre;
         this.precio = precio;
     }
+    
+    public Articulo( Articulo articulo ){
+        sku = articulo.sku;
+        nombre = articulo.nombre;
+        precio = articulo.precio; 
+    }
 }
