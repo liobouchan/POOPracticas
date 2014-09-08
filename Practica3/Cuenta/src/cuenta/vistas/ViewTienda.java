@@ -6,6 +6,8 @@
 
 package cuenta.vistas;
 
+import cuenta.Cliente;
+
 /**
  *
  * @author lio
@@ -19,6 +21,17 @@ public class ViewTienda extends javax.swing.JFrame {
         initComponents();
     }
 
+    public String showNombre( Cliente cliente ){
+        String nombre = cliente.nombre;
+        showNombre.setText(nombre);
+        return nombre;
+    }
+    
+    public void obtainData(Cliente cliente){
+        Cliente cliente0 = new Cliente("", 0, 0, 0, "");
+        cliente0 = cliente;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always

@@ -117,7 +117,9 @@ public class ViewCliente extends javax.swing.JFrame {
         limite = Integer.parseInt(textLimite.getText());
         
         Cliente cliente = new Cliente(nombre, 0, 0, 0, ID);
-        new ViewTienda().setVisible(true);
+        ViewTienda vistaTienda = new ViewTienda();
+        vistaTienda.setVisible(true);
+        vistaTienda.showNombre(cliente);
     }//GEN-LAST:event_botonEntrarActionPerformed
 
     /**

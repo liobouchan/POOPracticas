@@ -15,6 +15,7 @@ import cuenta.vistas.ViewCliente;
  */
 public class Main {
     public static void main(String args[]){
-        new ViewCliente().setVisible(true);
+        ViewCliente vistaCliente = new ViewCliente();
+        vistaCliente.setVisible(true);
     }
 }

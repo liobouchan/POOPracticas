@@ -11,7 +11,7 @@ package cuenta;
  * @author liodebian
  */
 public class Cliente {
-    private String nombre;
+    public  String nombre;
     private int numeroDeArticulos;
     private double cuentaTotal;
     private double cuentaParcial;
