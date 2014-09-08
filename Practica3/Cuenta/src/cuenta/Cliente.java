@@ -24,4 +24,12 @@ public class Cliente {
         this.cuentaParcial = cuentaParcial;
         this.ID = ID;
     }
+    
+    public Cliente( Cliente cliente ){
+        nombre = cliente.nombre;
+        numeroDeArticulos = cliente.numeroDeArticulos;
+        cuentaTotal = cliente.cuentaTotal;
+        cuentaParcial = cliente.cuentaParcial;
+        ID = cliente.ID;
+    }
 }
