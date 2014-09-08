@@ -9,6 +9,7 @@ package cuenta.vistas;
 import cuenta.Articulo;
 import cuenta.Cliente;
 import cuenta.Cuenta;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -62,6 +63,7 @@ public class ViewTienda extends javax.swing.JFrame {
         saldoAnterior = cuenta.saldo;
         saldo = saldoAnterior + articulo.precio;
         if( saldo > cuenta.limite ){
+            JOptionPane.showMessageDialog(this, "límite de crédito Excedido");
             showSaldo.setText("LIMITE EXCEDIDO");
         }else{
             cuenta.saldo = saldo;
