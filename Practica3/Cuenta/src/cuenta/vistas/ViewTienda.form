@@ -51,10 +51,10 @@
                   </Group>
                   <Group type="102" attributes="0">
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="textInfoSaldo" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="showSaldo" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
+                          <Component id="textInfoSaldo" min="-2" max="-2" attributes="0"/>
+                          <Component id="showSaldo" min="-2" pref="162" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" attributes="0">
                               <Component id="textInfoPesos" min="-2" pref="20" max="-2" attributes="0"/>
@@ -161,6 +161,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Comprar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonComprarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="showNombre">
       <Properties>

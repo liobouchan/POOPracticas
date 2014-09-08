@@ -19,20 +19,32 @@ public class ViewTienda extends javax.swing.JFrame {
     /**
      * Creates new form ViewTienda
      */
+    
+    Cuenta cuenta = new Cuenta("", 0, 0);
+    Articulo articulo = new Articulo(0, "", 0);
+    
     public ViewTienda() {
         initComponents();
     }
 
+    public ViewTienda(Articulo articulo , Cuenta cuenta){
+        initComponents();
+        this.articulo = articulo;
+        this.cuenta = cuenta;
+    }
+    
     public String showNombre( Cliente cliente ){
         String nombre = cliente.nombre;
         showNombre.setText(nombre);
         return nombre;
     }
     
-    public double showLimite( Cuenta cuenta ){
+    public double showLimiteYSaldo( Cuenta cuenta ){
        double limite = cuenta.limite;
+       double saldo = cuenta.saldo;
        showLimite.setText(String.valueOf(limite));
-       return limite; 
+       showSaldo.setText(String.valueOf(saldo));
+       return saldo; 
     }
     
     public String showArticulos( Articulo articulo ){
@@ -43,10 +55,21 @@ public class ViewTienda extends javax.swing.JFrame {
        return nombre;
     }
     
-    public void obtainData(Cliente cliente){
-        Cliente cliente0 = new Cliente("", 0, 0, 0, "");
-        cliente0 = cliente;
+    public double Comprar( Cuenta cuenta , Articulo articulo){
+        double saldoAnterior;
+        double saldo;
+        
+        saldoAnterior = cuenta.saldo;
+        saldo = saldoAnterior + articulo.precio;
+        if( saldo > cuenta.limite ){
+            showSaldo.setText("LIMITE EXCEDIDO");
+        }else{
+            cuenta.saldo = saldo;
+            showLimiteYSaldo(cuenta);
+        }
+        return saldo;
     }
+ 
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -92,6 +115,11 @@ public class ViewTienda extends javax.swing.JFrame {
         showLimite.setText("jLabel1");
 
         buttonComprar.setText("Comprar");
+        buttonComprar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonComprarActionPerformed(evt);
+            }
+        });
 
         showNombre.setText("jLabel1");
 
@@ -126,8 +154,8 @@ public class ViewTienda extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(textInfoSaldo)
-                            .addComponent(showSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(62, 62, 62)
+                            .addComponent(showSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(textInfoPesos, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -172,6 +200,11 @@ public class ViewTienda extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonComprarActionPerformed
+        // TODO add your handling code here:
+        Comprar(cuenta, articulo);
+    }//GEN-LAST:event_buttonComprarActionPerformed
 
     /**
      * @param args the command line arguments

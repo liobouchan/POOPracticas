@@ -12,12 +12,18 @@ package cuenta;
  */
 public class Cuenta {
     private String ID;
-    private double saldo;
+    public double saldo;
     public double limite;
     
     public Cuenta(String ID , double saldo , double limite){
         this.ID = ID;
         this.saldo = saldo;
         this.limite = limite;
+    }
+    
+    public Cuenta(Cuenta unaCuenta){
+        ID = unaCuenta.ID;
+        saldo = unaCuenta.saldo;
+        limite = unaCuenta.limite;
     }
 }

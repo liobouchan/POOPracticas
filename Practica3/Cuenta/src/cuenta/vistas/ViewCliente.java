@@ -120,11 +120,11 @@ public class ViewCliente extends javax.swing.JFrame {
         Cliente cliente = new Cliente(nombre, 0, 0, 0, ID);
         Cuenta cuenta = new Cuenta(ID, 0, limite);
         Articulo articulo = new Articulo(001, "Iphone 9", 199.99);
-        ViewTienda vistaTienda = new ViewTienda();
-
+        ViewTienda vistaTienda = new ViewTienda(articulo , cuenta);
+        
         vistaTienda.setVisible(true);
         vistaTienda.showNombre(cliente);
-        vistaTienda.showLimite(cuenta);
+        vistaTienda.showLimiteYSaldo(cuenta);
         vistaTienda.showArticulos(articulo);
     }//GEN-LAST:event_botonEntrarActionPerformed
 
