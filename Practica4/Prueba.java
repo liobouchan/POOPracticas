@@ -1,34 +1,30 @@
 class Prueba{
 
-public static void main( String args[] )
+public static void main( String args[] ){
 
-{
+  //Declaración de Variables a Utilizar
+  String cadena = "1234";
+  String cadenaf = "1.358";
+  String cadenad = "102.3654";
+  char c;
 
-String cadena = "1234";
+  for( int n = 0; n < cadena.length(); n++ ) {
 
-String cadenaf = "1.358";
+    // c va a ser igual al valor n de la cadena String
+    c = cadena.charAt(n);
+    //Aqui se realiza la traducción de caracter a código a base 10
+    int i = Character.digit(c, 10);
+    //Se imprime el caracter convertido a número base 10
+    System.out.println( "El número entero es : " + i );
+  }
 
-String cadenad = "102.3654";
+  //Se crea un objeto flotante fo con el valor de la cadenaf
+  Float fo = Float.valueOf( cadenaf );
+  System.out.println( "El objeto Flotante es : " + fo );
 
-char c;
-
-for( int n=0; n<cadena.length(); n++ ) {
-
-c = cadena.charAt(n);
-
-int i = Character.digit(c, 10);
-
-System.out.println( "El n£mero entero es : " + i );
-
-}
-
-Float fo = Float.valueOf( cadenaf );
-
-System.out.println( "El objeto Flotante es : " + fo );
-
-float f = fo.floatValue();
-
-System.out.println( "El número flotante es : " + f );
+  //Un flotante f va a ser igual al valor del objeto fo
+  float f = fo.floatValue();
+  System.out.println( "El número flotante es : " + f );
 
 Double D = Double.valueOf( cadenad );
 
