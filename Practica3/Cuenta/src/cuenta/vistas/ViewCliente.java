@@ -41,6 +41,7 @@ public class ViewCliente extends javax.swing.JFrame {
         botonEntrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Bienvenido a la Fayuca");
 
         labelInfo.setForeground(new java.awt.Color(51, 51, 255));
         labelInfo.setText("Introduce tus Datos");

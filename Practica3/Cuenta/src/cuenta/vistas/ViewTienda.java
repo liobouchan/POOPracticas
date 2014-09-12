@@ -65,6 +65,7 @@ public class ViewTienda extends javax.swing.JFrame {
         if( saldo > cuenta.limite ){
             JOptionPane.showMessageDialog(this, "límite de crédito Excedido");
             showSaldo.setText("LIMITE EXCEDIDO");
+            buttonComprar.setEnabled(false);
         }else{
             cuenta.saldo = saldo;
             showLimiteYSaldo(cuenta);
@@ -97,6 +98,7 @@ public class ViewTienda extends javax.swing.JFrame {
         textInfoPesos1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Compras en Linea");
 
         textInfo.setText("Bienvenido a la Tienda de Fayuca");
 
@@ -199,6 +201,8 @@ public class ViewTienda extends javax.swing.JFrame {
                 .addComponent(buttonComprar)
                 .addContainerGap())
         );
+
+        getAccessibleContext().setAccessibleDescription("Compras en Tiendita");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
