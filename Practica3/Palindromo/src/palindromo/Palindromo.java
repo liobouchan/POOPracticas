@@ -1,19 +1,22 @@
+package palindromo;
+
 public class Palindromo {
     
-    public boolean comprobar(String palabra){ 
-        if(palabra.length() == 1 || palabra.length() == 0) 
+    public boolean checar(String cadena){
+        if(cadena.length() == 1 || cadena.length() == 0){
              return true; 
-        else{ 
-            if(palabra.charAt(0) == palabra.charAt(palabra.length()-1) )             
-                return comprobar(palabra.substring(1,palabra.length()-1)); 
-                        return false;             
+        }else{
+            if(cadena.charAt(0) == cadena.charAt(cadena.length()-1) ){         
+                return checar(cadena.substring(1,cadena.length()-1)); 
+            }
+            return false;
         } 
     } 
-    
-     public boolean ajustar(String palabra){ 
-        palabra.toLowerCase(); 
-        String sinespacios = palabra.replaceAll(" ", ""); 
-        return comprobar(sinespacios); 
+
+     public boolean quitarEspacios(String cadena){ 
+        cadena.toLowerCase(); 
+        String sinespacios = cadena.replaceAll(" ", ""); 
+        return checar(sinespacios); 
     }
      
 }
