@@ -13,6 +13,9 @@ class Ejemplo1 {
 
  	Circulo c1 = new Circulo(1.0, 1.0, 2.0);
 	Circulo c2 = new Circulo(0.0, 0.0, 3.0);
+        Circulo c3 = new Circulo(0.0, 0.0, 0.0);
+        //Circulo c4 = new Circulo(x, y, r);
+        //Circulo c5 = new Circulo(x, y, r);
 
 	c = c1.elMayor(c2);
 
@@ -25,16 +28,22 @@ class Ejemplo1 {
 
 	VentanaCerrable ventana = new VentanaCerrable("Ventana abierta al mundo...");
 	ArrayList v = new ArrayList();
-	CirculoGrafico cg1 = new CirculoGrafico(200, 200, 100, Color.red);
-	CirculoGrafico cg2 = new CirculoGrafico(300, 200, 100, Color.blue);
+	CirculoGrafico cg1 = new CirculoGrafico(150, 200, 100, Color.blue);
+	CirculoGrafico cg2 = new CirculoGrafico(355, 200, 100, Color.black);
+        CirculoGrafico cg3 = new CirculoGrafico(560, 200, 100, Color.red);
+        CirculoGrafico cg4 = new CirculoGrafico(250, 300, 100, Color.yellow);
+        CirculoGrafico cg5 = new CirculoGrafico(457.5, 300, 100, Color.green);
 	RectanguloGrafico rg = new RectanguloGrafico(50, 50, 450, 350, Color.green);
 	v.add(cg1);
 	v.add(cg2);
-	v.add(rg);
+        v.add(cg3);
+        v.add(cg4);
+        v.add(cg5);
+	//v.add(rg);  Se elimina para que quede como en la imagen de la practica
 
 	PanelDibujo mipanel = new PanelDibujo(v);
 	ventana.add(mipanel);
-	ventana.setSize(500, 400);
+	ventana.setSize(800, 500);
 	ventana.setVisible(true);
 
 	System.out.println("Termina main()...");
