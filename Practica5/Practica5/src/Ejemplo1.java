@@ -13,9 +13,6 @@ class Ejemplo1 {
 
  	Circulo c1 = new Circulo(1.0, 1.0, 2.0);
 	Circulo c2 = new Circulo(0.0, 0.0, 3.0);
-        Circulo c3 = new Circulo(0.0, 0.0, 0.0);
-        //Circulo c4 = new Circulo(x, y, r);
-        //Circulo c5 = new Circulo(x, y, r);
 
 	c = c1.elMayor(c2);
 
@@ -43,7 +40,8 @@ class Ejemplo1 {
 
 	PanelDibujo mipanel = new PanelDibujo(v);
 	ventana.add(mipanel);
-	ventana.setSize(800, 500);
+        ventana.setBackground(Color.white);
+	ventana.setSize(750, 500);
 	ventana.setVisible(true);
 
 	System.out.println("Termina main()...");
