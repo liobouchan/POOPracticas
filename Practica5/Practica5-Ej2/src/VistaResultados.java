@@ -1,3 +1,7 @@
+
+import java.awt.Color;
+import java.util.ArrayList;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -68,6 +72,7 @@ public class VistaResultados extends javax.swing.JFrame {
         labelResultadoAreaRectangulo = new javax.swing.JLabel();
         labelResultadoPerimetroRectangulo = new javax.swing.JLabel();
         labelResultadoLongitud = new javax.swing.JLabel();
+        Grafica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -102,6 +107,13 @@ public class VistaResultados extends javax.swing.JFrame {
         labelResultadoPerimetroRectangulo.setText("jLabel9");
 
         labelResultadoLongitud.setText("jLabel9");
+
+        Grafica.setText("Graficar");
+        Grafica.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GraficaActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -147,6 +159,10 @@ public class VistaResultados extends javax.swing.JFrame {
                         .addGap(102, 102, 102)
                         .addComponent(labelResultadoLongitud)))
                 .addGap(124, 124, 124))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Grafica)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,11 +193,41 @@ public class VistaResultados extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(labelResultadoLongitud))
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(Grafica)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void GraficaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GraficaActionPerformed
+        // TODO add your handling code here:
+        Circulo c = new Circulo(2.0, 2.0, 4.0);
+
+	VentanaCerrable ventana = new VentanaCerrable("Ventana abierta al mundo...");
+	ArrayList v = new ArrayList();
+	CirculoGrafico cg1 = new CirculoGrafico(150, 200, 100, Color.blue);
+	CirculoGrafico cg2 = new CirculoGrafico(355, 200, 100, Color.black);
+        CirculoGrafico cg3 = new CirculoGrafico(560, 200, 100, Color.red);
+        CirculoGrafico cg4 = new CirculoGrafico(250, 300, 100, Color.yellow);
+        CirculoGrafico cg5 = new CirculoGrafico(457.5, 300, 100, Color.green);
+	RectanguloGrafico rg = new RectanguloGrafico(50, 50, 450, 350, Color.green);
+	v.add(cg1);
+	v.add(cg2);
+        v.add(cg3);
+        v.add(cg4);
+        v.add(cg5);
+	v.add(rg);
+
+	PanelDibujo mipanel = new PanelDibujo(v);
+	ventana.add(mipanel);
+        ventana.setBackground(Color.white);
+	ventana.setSize(750, 500);
+	ventana.setVisible(true);
+
+	System.out.println("Termina main()...");
+    }//GEN-LAST:event_GraficaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -219,6 +265,7 @@ public class VistaResultados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Grafica;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
