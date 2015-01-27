@@ -10,7 +10,7 @@ class Ejemplo1 {
 
  	System.out.println("Radio ="+c.r +"unidades.");
 	System.out.println("Centro = (" + c.x + "," + c.y + ") unidades.");
-
+        System.out.println(c.perimetro());
  	Circulo c1 = new Circulo(1.0, 1.0, 2.0);
 	Circulo c2 = new Circulo(0.0, 0.0, 3.0);
 
