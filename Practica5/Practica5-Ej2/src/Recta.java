@@ -15,7 +15,7 @@ public class Recta extends Geometria{
     
     // definición de métodos
     public double perimetro(){ 
-        return x1-x2; 
+        return x2-x1; 
     }
 
     public double area(){
