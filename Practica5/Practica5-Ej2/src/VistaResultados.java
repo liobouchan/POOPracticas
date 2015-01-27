@@ -30,6 +30,16 @@ public class VistaResultados extends javax.swing.JFrame {
         labelPerimientroCirculoResultado.setText(String.valueOf(perimetroCirculo));
         return perimetroCirculo;
     }
+    
+    public Double setAreaRectangulo( double areaRectangulo ){
+        labelResultadoAreaRectangulo.setText(String.valueOf(areaRectangulo));
+        return areaRectangulo;
+    }
+    
+    public Double setPerimetroRectangulo( double perimetroRectangulo ){
+        labelResultadoPerimetroRectangulo.setText(String.valueOf(perimetroRectangulo));
+        return perimetroRectangulo;
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
