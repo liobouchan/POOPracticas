@@ -150,13 +150,27 @@ public class VistaDatos extends javax.swing.JFrame {
 
     private void buttonCalcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonCalcularActionPerformed
         // TODO add your handling code here:
+        //Declaración de Variables
         double radio;
+        double base , altura;
+        
+        //Asignacion de valores a las variables
         radio = Double.parseDouble(textCirculo.getText());
-
+        base = Double.parseDouble(textBaseRectangulo.getText());
+        altura = Double.parseDouble(textAlturaRectangulo.getText());
+        
+        //Creación de Objetos ya con valores obtenidos
         Circulo circulo = new Circulo(radio);
+        Rectangulo rectangulo = new Rectangulo(base, altura);
+        VistaResultados vistaResultados = new VistaResultados();
+
+        //Obtención de areas y perimetros
         double areaCirculo = circulo.area();
         double perimetroCirculo = circulo.perimetro();
-        VistaResultados vistaResultados = new VistaResultados();
+        double areaRectangulo = rectangulo.area();
+        double perimetroRectangulo = rectangulo.perimetro();
+        
+        //Envio de valores a la vista que nos va a dar la ifnormacion solicitada
         vistaResultados.setAreaCirculo(areaCirculo);
         vistaResultados.setPerimetroCirculo(perimetroCirculo);
         vistaResultados.setVisible(true);
