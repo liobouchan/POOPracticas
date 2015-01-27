@@ -65,16 +65,20 @@ public class VistaResultados extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jLabel1.setForeground(new java.awt.Color(51, 51, 255));
         jLabel1.setText("Circulo");
 
         jLabel2.setText("Area:");
 
         jLabel3.setText("Perimetro:");
 
+        labelResultadoArea.setForeground(new java.awt.Color(51, 51, 255));
         labelResultadoArea.setText("jLabel4");
 
+        labelPerimientroCirculoResultado.setForeground(new java.awt.Color(51, 51, 255));
         labelPerimientroCirculoResultado.setText("jLabel5");
 
+        jLabel4.setForeground(new java.awt.Color(255, 0, 51));
         jLabel4.setText("Rectangulo");
 
         jLabel5.setText("Area:");
@@ -85,8 +89,10 @@ public class VistaResultados extends javax.swing.JFrame {
 
         jLabel8.setText("Longitud:");
 
+        labelResultadoAreaRectangulo.setForeground(new java.awt.Color(255, 0, 51));
         labelResultadoAreaRectangulo.setText("jLabel9");
 
+        labelResultadoPerimetroRectangulo.setForeground(new java.awt.Color(255, 0, 51));
         labelResultadoPerimetroRectangulo.setText("jLabel9");
 
         labelResultadoLongitud.setText("jLabel9");

@@ -121,6 +121,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="33" red="33" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Circulo"/>
       </Properties>
     </Component>
@@ -136,16 +139,25 @@
     </Component>
     <Component class="javax.swing.JLabel" name="labelResultadoArea">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="33" red="33" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="jLabel4"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="labelPerimientroCirculoResultado">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="33" red="33" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="jLabel5"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="0" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="Rectangulo"/>
       </Properties>
     </Component>
@@ -171,11 +183,17 @@
     </Component>
     <Component class="javax.swing.JLabel" name="labelResultadoAreaRectangulo">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="0" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="jLabel9"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="labelResultadoPerimetroRectangulo">
       <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="0" red="ff" type="rgb"/>
+        </Property>
         <Property name="text" type="java.lang.String" value="jLabel9"/>
       </Properties>
     </Component>
