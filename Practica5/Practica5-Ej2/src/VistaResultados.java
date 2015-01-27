@@ -75,6 +75,7 @@ public class VistaResultados extends javax.swing.JFrame {
         Grafica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Resultados");
 
         jLabel1.setForeground(new java.awt.Color(51, 51, 255));
         jLabel1.setText("Circulo");
@@ -205,28 +206,20 @@ public class VistaResultados extends javax.swing.JFrame {
         // TODO add your handling code here:
         Circulo c = new Circulo(2.0, 2.0, 4.0);
 
-	VentanaCerrable ventana = new VentanaCerrable("Ventana abierta al mundo...");
+	VentanaCerrable ventana = new VentanaCerrable("Figuras Gráficas");
 	ArrayList v = new ArrayList();
 	CirculoGrafico cg1 = new CirculoGrafico(150, 200, 100, Color.blue);
-	CirculoGrafico cg2 = new CirculoGrafico(355, 200, 100, Color.black);
-        CirculoGrafico cg3 = new CirculoGrafico(560, 200, 100, Color.red);
-        CirculoGrafico cg4 = new CirculoGrafico(250, 300, 100, Color.yellow);
-        CirculoGrafico cg5 = new CirculoGrafico(457.5, 300, 100, Color.green);
-	RectanguloGrafico rg = new RectanguloGrafico(50, 50, 450, 350, Color.green);
-	v.add(cg1);
-	v.add(cg2);
-        v.add(cg3);
-        v.add(cg4);
-        v.add(cg5);
+	RectanguloGrafico rg = new RectanguloGrafico(260, 100, 350, 300, Color.red);
+
+        v.add(cg1);
 	v.add(rg);
 
 	PanelDibujo mipanel = new PanelDibujo(v);
 	ventana.add(mipanel);
-        ventana.setBackground(Color.white);
-	ventana.setSize(750, 500);
+        ventana.setBackground(Color.BLACK);
+	ventana.setSize(400, 350);
 	ventana.setVisible(true);
 
-	System.out.println("Termina main()...");
     }//GEN-LAST:event_GraficaActionPerformed
 
     /**

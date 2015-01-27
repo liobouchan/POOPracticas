@@ -17,6 +17,7 @@ class RectanguloGrafico extends Rectangulo implements Dibujable {
     public void dibujar(Graphics dw) {
         dw.setColor(color);
         dw.drawRect((int)x1, (int)y1, (int)(x2-x1), (int)(y2-y1));
+        dw.drawLine(5, 30, 380, 30);
     }
 
     public void setPosicion(double x, double y) {

@@ -44,6 +44,7 @@ public class VistaDatos extends javax.swing.JFrame {
         buttonCalcular = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cálculo de Áreas y Perimetros con Gráficas");
 
         labelInstrucciones.setText("Introduce las Medidas de las Figuras a Calcular :");
 
