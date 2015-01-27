@@ -173,6 +173,8 @@ public class VistaDatos extends javax.swing.JFrame {
         //Envio de valores a la vista que nos va a dar la ifnormacion solicitada
         vistaResultados.setAreaCirculo(areaCirculo);
         vistaResultados.setPerimetroCirculo(perimetroCirculo);
+        vistaResultados.setAreaRectangulo(areaRectangulo);
+        vistaResultados.setPerimetroRectangulo(perimetroRectangulo);
         vistaResultados.setVisible(true);
     }//GEN-LAST:event_buttonCalcularActionPerformed
 
