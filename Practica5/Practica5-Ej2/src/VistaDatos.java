@@ -69,7 +69,7 @@ public class VistaDatos extends javax.swing.JFrame {
             }
         });
 
-        buttonCalcular.setText("Calcular y Dibujar.");
+        buttonCalcular.setText("Calcular Área , Perimetro y Longitud.");
         buttonCalcular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonCalcularActionPerformed(evt);
