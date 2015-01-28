@@ -183,6 +183,18 @@ public class VistaDatos extends javax.swing.JFrame {
         vistaResultados.setPerimetroRectangulo(perimetroRectangulo);
         vistaResultados.setLongitudRecta(longitud);
         vistaResultados.setVisible(true);
+        
+        VentanaCerrable ventana = new VentanaCerrable("Figuras Gráficas");
+	ArrayList v = new ArrayList();
+	CirculoGrafico cg1 = new CirculoGrafico(300, 200, circulo.r, Color.blue);
+      	RectanguloGrafico rg = new RectanguloGrafico(260, 100, rectangulo.x, rectangulo.y, Color.red);
+        v.add(cg1);
+        v.add(rg);
+        PanelDibujo mipanel = new PanelDibujo(v);
+	ventana.add(mipanel);
+        ventana.setBackground(Color.BLACK);
+	ventana.setSize(600, 500);
+	ventana.setVisible(true);
     }//GEN-LAST:event_buttonCalcularActionPerformed
 
     /**

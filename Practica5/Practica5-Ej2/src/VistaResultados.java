@@ -21,6 +21,13 @@ public class VistaResultados extends javax.swing.JFrame {
         initComponents();
     }
     
+/*    public Geometria setValues(Circulo circulo , Rectangulo rectangulo, Recta recta){
+        Circulo circulo1 = new Circulo(circulo);
+        Rectangulo rectangulo1 = new Rectangulo(rectangulo.x, rectangulo.y);
+        Recta recta1 = new Recta(recta.x1, recta.x2);
+        return circulo1;
+    }*/
+    
     public VistaResultados(double areaCirculo){
         double areaCirculito = areaCirculo;
     }
@@ -72,7 +79,6 @@ public class VistaResultados extends javax.swing.JFrame {
         labelResultadoAreaRectangulo = new javax.swing.JLabel();
         labelResultadoPerimetroRectangulo = new javax.swing.JLabel();
         labelResultadoLongitud = new javax.swing.JLabel();
-        Grafica = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Resultados");
@@ -108,13 +114,6 @@ public class VistaResultados extends javax.swing.JFrame {
         labelResultadoPerimetroRectangulo.setText("jLabel9");
 
         labelResultadoLongitud.setText("jLabel9");
-
-        Grafica.setText("Graficar");
-        Grafica.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                GraficaActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -160,10 +159,6 @@ public class VistaResultados extends javax.swing.JFrame {
                         .addGap(102, 102, 102)
                         .addComponent(labelResultadoLongitud)))
                 .addGap(124, 124, 124))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Grafica)
-                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -194,33 +189,11 @@ public class VistaResultados extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
                     .addComponent(labelResultadoLongitud))
-                .addGap(18, 18, 18)
-                .addComponent(Grafica)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void GraficaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GraficaActionPerformed
-        // TODO add your handling code here:
-        Circulo c = new Circulo(2.0, 2.0, 4.0);
-
-	VentanaCerrable ventana = new VentanaCerrable("Figuras Gráficas");
-	ArrayList v = new ArrayList();
-	CirculoGrafico cg1 = new CirculoGrafico(150, 200, 100, Color.blue);
-	RectanguloGrafico rg = new RectanguloGrafico(260, 100, 350, 300, Color.red);
-
-        v.add(cg1);
-	v.add(rg);
-
-	PanelDibujo mipanel = new PanelDibujo(v);
-	ventana.add(mipanel);
-        ventana.setBackground(Color.BLACK);
-	ventana.setSize(400, 350);
-	ventana.setVisible(true);
-
-    }//GEN-LAST:event_GraficaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -258,7 +231,6 @@ public class VistaResultados extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton Grafica;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
