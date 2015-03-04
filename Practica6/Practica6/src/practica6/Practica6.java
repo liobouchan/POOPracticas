@@ -37,7 +37,7 @@ public class Practica6 extends javax.swing.JFrame {
         quick_sort( arreglo, abajo, fin );
     }
     /**
-     * Creates new form Ordenar
+     * Creates new form Practica6
      */
     public Practica6() {
         initComponents();
@@ -52,9 +52,8 @@ public class Practica6 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        botonBurbuja = new javax.swing.JButton();
+        botonQuickSort = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         textNumerosAleatorios = new javax.swing.JTextField();
@@ -63,21 +62,19 @@ public class Practica6 extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Burbuja");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        botonBurbuja.setText("Burbuja");
+        botonBurbuja.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                botonBurbujaActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Rapido");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        botonQuickSort.setText("Rapido");
+        botonQuickSort.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                botonQuickSortActionPerformed(evt);
             }
         });
-
-        jButton3.setText("Arreglo");
 
         jLabel1.setText("Números Aleatorios");
 
@@ -122,11 +119,10 @@ public class Practica6 extends javax.swing.JFrame {
                                     .addComponent(textNumerosAleatorios, javax.swing.GroupLayout.Alignment.LEADING))))
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2)
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(botonQuickSort)
                         .addGap(133, 133, 133)
-                        .addComponent(jButton1)))
+                        .addComponent(botonBurbuja)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -144,16 +140,15 @@ public class Practica6 extends javax.swing.JFrame {
                 .addComponent(textNumerosOrdenados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(botonBurbuja)
+                    .addComponent(botonQuickSort))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void botonBurbujaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonBurbujaActionPerformed
         // TODO add your handling code here:
         
         numerosnuevos = "";
@@ -177,7 +172,7 @@ public class Practica6 extends javax.swing.JFrame {
             numerosnuevos += df.format(arreglo[i])+", ";
     
         textNumerosOrdenados.setText(numerosnuevos+"\b\b ");
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_botonBurbujaActionPerformed
 
     private void textNumerosAleatoriosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textNumerosAleatoriosActionPerformed
         // TODO add your handling code here:
@@ -192,21 +187,20 @@ public class Practica6 extends javax.swing.JFrame {
         // TODO add your handling code here:
         numerosantes = "";
         for( int i=0; i<arreglo.length; i++ ) {
-        arreglo[i] = (int)( Math.random() * 30.0);
-        numerosantes += df.format(arreglo[i])+", ";
+            arreglo[i] = (int)( Math.random() * 30.0);
+            numerosantes += df.format(arreglo[i])+", ";
         }   
         textNumerosAleatorios.setText(numerosantes+"\b\b ");
     }//GEN-LAST:event_botonGenerarNumerosActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void botonQuickSortActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonQuickSortActionPerformed
         // TODO add your handling code here:
         int i;
         quick_sort( arreglo, 0, arreglo.length-1 );
         for( i=0; i<arreglo.length; i++ )
             numerosnuevos += df.format(arreglo[i])+", ";
-    
         textNumerosOrdenados.setText(numerosnuevos+"\b\b ");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_botonQuickSortActionPerformed
 
    
     /**
@@ -245,10 +239,9 @@ public class Practica6 extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonBurbuja;
     private javax.swing.JButton botonGenerarNumeros;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton botonQuickSort;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField textNumerosAleatorios;
