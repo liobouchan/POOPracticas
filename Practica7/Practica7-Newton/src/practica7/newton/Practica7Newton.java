@@ -17,6 +17,8 @@ public class Practica7Newton {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Newton newtonRaphson = new Newton(new Cuadrado(), -1.0, 8.0, 1E-15);
+	System.out.println("Raíz: " + newtonRaphson.encontrarRaiz());
     }
     
 }

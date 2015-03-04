@@ -19,8 +19,8 @@ public class Newton {
     private double b;
 
     //Constructores
-        public Newton(InterfazNewton funciones, double extremoA, double extremoB, double eps) {
-            funciones = funciones;
+        public Newton(InterfazNewton fun, double extremoA, double extremoB, double eps) {
+            funciones = fun;
             a = extremoA;
             b = extremoB;
             epsilon = eps;
