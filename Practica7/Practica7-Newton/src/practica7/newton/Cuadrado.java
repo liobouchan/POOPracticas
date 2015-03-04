@@ -10,7 +10,13 @@ package practica7.newton;
  *
  * @author lio
  */
-public interface InterfazNewton {
-    public double funcion(double x);
-    public double funcionDerivada(double x);
+public class Cuadrado implements InterfazNewton{
+    @Override
+    public double funcion(double x) {
+        return x*x - 2;
+    }
+    @Override
+    public double funcionDerivada(double x) {
+        return 2*x;
+    }
 }
