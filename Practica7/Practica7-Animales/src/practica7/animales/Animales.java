@@ -23,8 +23,10 @@ public class Animales extends javax.swing.JPanel{
     private void initAnimales(){
         animales = new HashMap<String, String>();
         animales.put("elefante", "mamífero");
-        animales.put("conejo", "mamífero marsupial");
-        animales.put("serpiente", "reptil");
+        animales.put("conejo", "mamífero");
+        animales.put("gato", "felino");
+        animales.put("mono", "primate");
+        animales.put("pollo", "polluelo");
     }
      
     public Animales(String nombreImagen) {
